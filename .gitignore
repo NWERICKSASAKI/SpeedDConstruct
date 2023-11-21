@@ -1,0 +1,6 @@
+# ignore all .apk files
+*.apk*
+*.exe
+*.pck
+*.html
+*.wasm
