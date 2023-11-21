@@ -1,0 +1,124 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://SCENE/CardSprite.tscn" type="PackedScene" id=1]
+[ext_resource path="res://SCENE/ADeck.gd" type="Script" id=3]
+[ext_resource path="res://SCENE/GOLDEN_SHADER.tres" type="Material" id=4]
+[ext_resource path="res://IMAGENS_ICONES/FAV/FAV0.png" type="Texture" id=5]
+[ext_resource path="res://IMAGENS_ICONES/DECKS/Sample_deck.png" type="Texture" id=6]
+[ext_resource path="res://Fonts/DowCorporate-Medium.ttf" type="DynamicFontData" id=7]
+
+[sub_resource type="DynamicFont" id=4]
+size = 108
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 32
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 7 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 37, 63 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 200, 140 )
+
+[node name="ADeck" type="Button"]
+margin_right = 400.0
+margin_bottom = 280.0
+rect_min_size = Vector2( 450, 330 )
+rect_clip_content = true
+mouse_filter = 2
+action_mode = 0
+flat = true
+script = ExtResource( 3 )
+
+[node name="BackColor" type="Polygon2D" parent="."]
+color = Color( 0.282353, 0.309804, 0.635294, 1 )
+polygon = PoolVector2Array( 0, 0, 400, 0, 400, 280, 0, 280 )
+
+[node name="CARD_LEFT" parent="." instance=ExtResource( 1 )]
+position = Vector2( 4, 47 )
+rotation = -0.261799
+scale = Vector2( 0.15, 0.15 )
+
+[node name="CARD_RIGHT" parent="." instance=ExtResource( 1 )]
+position = Vector2( 241, 6 )
+rotation = 0.261799
+scale = Vector2( 0.15, 0.15 )
+
+[node name="CARD_FRONT" parent="." instance=ExtResource( 1 )]
+position = Vector2( 118, 5 )
+rotation = 0.00872665
+scale = Vector2( 0.16, 0.16 )
+
+[node name="plusTXT" type="RichTextLabel" parent="."]
+material = ExtResource( 4 )
+margin_left = 1.0
+margin_top = 51.0
+margin_right = 399.0
+margin_bottom = 194.0
+mouse_filter = 2
+custom_fonts/normal_font = SubResource( 4 )
+bbcode_enabled = true
+bbcode_text = "[center]+[/center]"
+text = "+"
+fit_content_height = true
+scroll_active = false
+
+[node name="BackColor2" type="Polygon2D" parent="."]
+position = Vector2( 0, -92 )
+color = Color( 0.533333, 0.533333, 0.533333, 0.533333 )
+polygon = PoolVector2Array( 0, 290, 400, 290, 400, 330, 0, 330 )
+
+[node name="DeckTitleTXT" type="RichTextLabel" parent="."]
+margin_left = 1.0
+margin_top = 202.0
+margin_right = 399.0
+margin_bottom = 236.0
+mouse_filter = 2
+custom_fonts/normal_font = SubResource( 3 )
+bbcode_enabled = true
+bbcode_text = "[center]Create a new deck[/center]"
+text = "Create a new deck"
+fit_content_height = true
+scroll_active = false
+
+[node name="FAV" type="Sprite" parent="."]
+position = Vector2( 19, 247 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="FAV"]
+position = Vector2( -1, 2 )
+shape = SubResource( 5 )
+shape_centered = false
+
+[node name="DECK_TYPE_SPRITE" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.533333 )
+position = Vector2( 367, 248 )
+texture = ExtResource( 6 )
+
+[node name="TSB1" type="TouchScreenButton" parent="."]
+shape = SubResource( 6 )
+passby_press = true
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( 200, 121 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="TSB" type="Button" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+focus_mode = 0
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+enabled_focus_mode = 0
+flat = true
+icon_align = 1

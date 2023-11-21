@@ -1,0 +1,104 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://SCENE/LOGO.gd" type="Script" id=1]
+[ext_resource path="res://SCENE/THEME.tres" type="Theme" id=2]
+[ext_resource path="res://IMAGENS_ICONES/Icon_My_Decks.png" type="Texture" id=3]
+[ext_resource path="res://Fonts/LOGO_B_TEXT.tres" type="DynamicFont" id=4]
+[ext_resource path="res://SCENE/MY_DECKS_ScrollContainer.gd" type="Script" id=5]
+[ext_resource path="res://SCENE/MY_DECK_TopMenu.gd" type="Script" id=9]
+[ext_resource path="res://SCENE/ADeck.tscn" type="PackedScene" id=12]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 245, 50 )
+
+[node name="MY_DECKS" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -960.0
+margin_top = -540.0
+margin_right = 960.0
+margin_bottom = 540.0
+
+[node name="textoProvisorio" type="RichTextLabel" parent="."]
+margin_left = 1248.0
+margin_top = 32.0
+margin_right = 1913.0
+margin_bottom = 165.0
+theme = ExtResource( 2 )
+text = "EM CONSTRUÇAO
+<< Toque no título para voltar"
+scroll_active = false
+
+[node name="LOGO" type="Sprite" parent="."]
+position = Vector2( 960, 75 )
+texture = ExtResource( 3 )
+offset = Vector2( -200, 0 )
+script = ExtResource( 1 )
+
+[node name="TSB" type="TouchScreenButton" parent="LOGO"]
+shape = SubResource( 1 )
+shape_centered = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="LOGO"]
+margin_left = -45.0
+margin_top = -33.0
+margin_right = 241.0
+margin_bottom = 53.0
+custom_fonts/normal_font = ExtResource( 4 )
+bbcode_enabled = true
+bbcode_text = "[center]Collection"
+text = "Collection"
+
+[node name="MY_DECK_TopMenu" type="Control" parent="."]
+theme = ExtResource( 2 )
+script = ExtResource( 9 )
+
+[node name="DropDown_SampleCustomDeck" type="OptionButton" parent="MY_DECK_TopMenu"]
+margin_left = 55.0
+margin_top = 25.0
+margin_right = 345.0
+margin_bottom = 96.0
+text = "View all Decks"
+clip_text = true
+icon_align = 2
+
+[node name="DropDown_Sort" type="OptionButton" parent="MY_DECK_TopMenu"]
+margin_left = 390.0
+margin_top = 25.0
+margin_right = 680.0
+margin_bottom = 96.0
+text = "Sort by"
+clip_text = true
+icon_align = 2
+
+[node name="MY_DECKS_ScrollContainer" type="ScrollContainer" parent="."]
+margin_left = 54.0
+margin_top = 200.0
+margin_right = 1866.0
+margin_bottom = 1080.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 2 )
+script = ExtResource( 5 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MY_DECKS_ScrollContainer"]
+margin_right = 450.0
+margin_bottom = 330.0
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MY_DECKS_ScrollContainer/VBoxContainer"]
+margin_right = 450.0
+margin_bottom = 330.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="ADeck" parent="MY_DECKS_ScrollContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 12 )]
+margin_right = 450.0
+margin_bottom = 330.0
+focus_mode = 0
+enabled_focus_mode = 0

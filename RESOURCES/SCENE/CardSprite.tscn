@@ -1,0 +1,250 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://BIBLIOTECA/CardSetup/Template/MonsterNormal_Card.png" type="Texture" id=1]
+[ext_resource path="res://Fonts/Yu-Gi-Oh! ITC Stone Serif Small Caps Bold.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://SCENE/CardSprite.gd" type="Script" id=3]
+[ext_resource path="res://BIBLIOTECA/CardSetup/Rarity/Secret.png" type="Texture" id=4]
+[ext_resource path="res://BIBLIOTECA/CardSetup/Attribute/DIVINE.png" type="Texture" id=5]
+[ext_resource path="res://BIBLIOTECA/CardSetup/STAR.png" type="Texture" id=6]
+[ext_resource path="res://BIBLIOTECA/CardSetup/Type/Continuous.png" type="Texture" id=7]
+[ext_resource path="res://Fonts/Yu-Gi-Oh! ITC Stone Serif LT Italic.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://Fonts/Stone Serif Semibold.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://SCENE/SecretRare.gd" type="Script" id=10]
+
+[sub_resource type="CanvasItemMaterial" id=12]
+blend_mode = 1
+
+[sub_resource type="DynamicFont" id=3]
+size = 60
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 36
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0, 0, 0, 1 )
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 6
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.27451, 0.27451, 0.27451, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0, 0, 0, 1 )
+border_blend = true
+
+[sub_resource type="Theme" id=7]
+VScrollBar/icons/decrement = null
+VScrollBar/icons/decrement_highlight = null
+VScrollBar/icons/increment = null
+VScrollBar/icons/increment_highlight = null
+VScrollBar/styles/grabber = SubResource( 5 )
+VScrollBar/styles/grabber_highlight = null
+VScrollBar/styles/grabber_pressed = null
+VScrollBar/styles/scroll = SubResource( 6 )
+VScrollBar/styles/scroll_focus = null
+
+[sub_resource type="DynamicFont" id=8]
+size = 32
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=11]
+resource_local_to_scene = true
+size = 40
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=10]
+resource_local_to_scene = true
+size = 30
+use_filter = true
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFontData" id=9]
+resource_local_to_scene = true
+font_path = "res://Fonts/Yu-Gi-Oh! Matrix Regular Small Caps 2.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 120
+outline_size = 5
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = SubResource( 9 )
+
+[node name="Card_Manual" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Illustration" type="Sprite" parent="."]
+light_mask = 0
+position = Vector2( 14, 14 )
+scale = Vector2( 3.49667, 3.5 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 305, 442 )
+region_filter_clip = true
+
+[node name="SecretRare" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.6 )
+material = SubResource( 12 )
+position = Vector2( 128, 278 )
+scale = Vector2( 2.54869, 2.53909 )
+texture = ExtResource( 4 )
+centered = false
+script = ExtResource( 10 )
+
+[node name="BG" type="Sprite" parent="."]
+scale = Vector2( 2.6, 2.6 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="ATTRIBUTE" type="Sprite" parent="."]
+position = Vector2( 955.048, 124.081 )
+scale = Vector2( 2.6, 2.6 )
+texture = ExtResource( 5 )
+
+[node name="SPELLTRAP" type="Sprite" parent="."]
+position = Vector2( 920.19, 232.122 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 7 )
+
+[node name="LV1" type="Sprite" parent="."]
+visible = false
+position = Vector2( 938.057, 224.151 )
+scale = Vector2( 2.444, 2.444 )
+texture = ExtResource( 6 )
+
+[node name="LV2" type="Sprite" parent="LV1"]
+position = Vector2( -29.1567, 0 )
+texture = ExtResource( 6 )
+
+[node name="LV3" type="Sprite" parent="LV1"]
+position = Vector2( -58.6166, 0 )
+texture = ExtResource( 6 )
+
+[node name="LV4" type="Sprite" parent="LV1"]
+position = Vector2( -87.7577, 0 )
+texture = ExtResource( 6 )
+
+[node name="LV5" type="Sprite" parent="LV1"]
+position = Vector2( -116.927, 0 )
+texture = ExtResource( 6 )
+
+[node name="LV6" type="Sprite" parent="LV1"]
+position = Vector2( -145.659, 0 )
+texture = ExtResource( 6 )
+
+[node name="LV7" type="Sprite" parent="LV1"]
+position = Vector2( -174.753, 0 )
+texture = ExtResource( 6 )
+
+[node name="LV8" type="Sprite" parent="LV1"]
+position = Vector2( -203.91, 0 )
+texture = ExtResource( 6 )
+
+[node name="LV9" type="Sprite" parent="LV1"]
+position = Vector2( -233.37, 0 )
+texture = ExtResource( 6 )
+
+[node name="LV10" type="Sprite" parent="LV1"]
+position = Vector2( -262.511, 0 )
+texture = ExtResource( 6 )
+
+[node name="LV11" type="Sprite" parent="LV1"]
+position = Vector2( -291.68, 0 )
+texture = ExtResource( 6 )
+
+[node name="LV12" type="Sprite" parent="LV1"]
+position = Vector2( -320.412, 0 )
+texture = ExtResource( 6 )
+
+[node name="SPELLTRAP_TXT" type="RichTextLabel" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 393.0
+margin_top = 189.0
+margin_right = 973.0
+margin_bottom = 274.0
+custom_fonts/normal_font = SubResource( 3 )
+bbcode_enabled = true
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PROPERTIES" type="RichTextLabel" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 88.0
+margin_top = 1169.0
+margin_right = 996.0
+margin_bottom = 1275.0
+custom_fonts/normal_font = SubResource( 4 )
+text = "[Inseto/Normal]"
+scroll_active = false
+
+[node name="DESC" type="RichTextLabel" parent="."]
+margin_left = 92.0
+margin_top = 1210.0
+margin_right = 1003.0
+margin_bottom = 1417.0
+theme = SubResource( 7 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 8 )
+bbcode_enabled = true
+bbcode_text = "
+Geralmente encontra em enxames, o habitat desse inseto é a floresta."
+text = "
+Geralmente encontra em enxames, o habitat desse inseto é a floresta."
+
+[node name="ATK" type="RichTextLabel" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 677.0
+margin_top = 1416.0
+margin_right = 788.0
+margin_bottom = 1461.0
+custom_fonts/normal_font = SubResource( 11 )
+text = "erro"
+scroll_active = false
+
+[node name="DEF" type="RichTextLabel" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 893.3
+margin_top = 1416.0
+margin_right = 1004.3
+margin_bottom = 1461.0
+custom_fonts/normal_font = SubResource( 11 )
+text = "erro"
+scroll_active = false
+
+[node name="SET" type="RichTextLabel" parent="."]
+margin_left = 679.0
+margin_top = 1120.0
+margin_right = 969.0
+margin_bottom = 1157.0
+custom_fonts/normal_font = SubResource( 10 )
+bbcode_enabled = true
+bbcode_text = "[right]SBAD-ENSS01[/right]"
+text = "SBAD-ENSS01"
+scroll_active = false
+
+[node name="NAME" type="RichTextLabel" parent="."]
+margin_left = 75.0
+margin_top = 74.0
+margin_right = 902.0
+margin_bottom = 172.0
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+custom_fonts/normal_font = SubResource( 2 )
+text = "AAAAAAAAAAA"
+scroll_active = false
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]

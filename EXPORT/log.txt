@@ -1,0 +1,367 @@
+[b]V0.4.07[/b]
+
+[b]Nota 2023.08.30 V0.4.07 - Atualização Setembro[/b]
+
+Atualização de Catálogo:
+* Adicionado STP6;
+* Atualizado limited list de setembro 2023.
+
+
+[b]Ideias e Correções para as próximas atualizações[/b]
+
+* Reestruturação do código do app inteiro......
+* Atualizar banlist;
+* Adicionar filtro de ATK/DEF para localizar "?"
+* [i]Deck Builder (em desenvolvimento);[/i]
+* Correção visual das novas boxes na tela de seleção de set;
+* Otimização da tela Collection;
+* Otimização da tela Configuration;
+* Adicionar opção de selecionar qual banlist visualizar no cátalogo;
+* Efeito giroscópio para Super Rare, Ultra Rare, Secret Rare.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[b]Nota 2023.08.30 V0.4.07 - SBC1 e atuzalição BanList[/b]
+
+Atualização de Catálogo:
+* Agora as cartas com artes alternativas são exibidas corretamente;
+* Adicionado SBC1;
+* Atualizado banlist de abril 2023.
+
+
+[b]Nota 2023.04.11 V0.4.07 - STP5 e SGX3[/b]
+
+Atualização de Catálogo:
+* Adicionado STP5;
+* Adicionado SGX3;
+* Atualizado banlist conforme January Speed Duel Events-only Limited List.
+
+
+[b]Nota 2022.11.24 V0.4.07 - Ajuste de resolução[/b]
+
+Na última atualização houve uma alteração em relação a adaptacação do app para diferentes resoluções, ao invés de centralizar estava alinhando a esquerda, então foi adaptado as várias cenas para se centralizar.
+* Iniciado ajuste de adaptação de resolução de tela;
+* Revertido ajuste de "pressed/released" na tela Collection devido a um erro que gerou no slider;
+* Leve alteração visual na imagem template de carta trap, na qual tinha uma linha azul na ilustração da carta;
+* Atualização de layout do deck viewer (e botão de voltar funcional)
+* [Correção] Ao fazer o ajuste de check de update dos SAMPLE DECKS, eu havia desligado o botão de acesso à pagina de download de update do app;
+* O local de botão de "Click here to download / Your app is uptodated" agora funciona contínuamente, ao invés de só quando tiver download.
+
+
+[b]Nota 2022.11.15 V0.4.06 - Testando Deck Viewer[/b]
+
+Testando o sistema de deck viewer:
+* Adicionado uma seção que permite visualizar os SAMPLE DECKS lançados nos decks e box;
+* Adicionado um simples viewer de cards desses decks
+Os botões ainda não são funcionais e ainda haverá ajuste de layout, mas é uma prévia minimente funcional para avaliação de desempenho e caça pro bugs.
+
+Correções e ajustes:
+* Percebido que as vezes a verificação de update acusa erro antes mesmo de fazer toda a verificação [corrigido];
+* O texto da tela de log estava com um branco com muito contraste com o fundo, reduzido esse contraste;
+* Mudado o comando dos botões de [i]released[/i] para [i]pressed[/i] - o que muda? bom, se deslizar o dedo "acidentalmente" e soltar em cima de um botão não vai mais acioná-lo.
+
+
+[b]Nota 2022.11.15 V0.4.05 - Que demora pra chegar às 99 cópias[/b]
+
+* Inserido um comando de [i]cheat[/i] que se ao selecionar a carta e aumenta 5 vezes e reduz 5 vezes a sua quantidade, é acionado um comando ativo (tem um efeito visual indicando): se aumentar ou reduzir alguma quantidade, é levado ao extremo;
+* Eu havia reduzido o tamanho da fonte do texto que acompanha o logo das seções do menu [reajustado];
+* Adicionado "Prideful Roar" que estava faltando na coleção; (agora vai aparecer independente se atualizar o app ou não)
+* Iniciado alguns preparativos a mais pro DeckBuilder (ainda em desenvolvimento)
+
+
+[b]Nota 2022.11.15 V0.4.04 - O Deck Builder pode esperar @.@[/b]
+
+Estava començando a desevolver o deck builder, porém encontrei alguns erros e bugs que achei essencial corrigir:
+
+* Corrigido dropdown menu tipos de monstro ou personagens de skill que estava "descalibrada";
+* Corrigido erro do dropdown menu tipos de monstro ou personagens de skill que se selecionado algum espaço que não tinha algum valor, travava o programa (embora na versão Android esse problema não se manifestava);
+* Corrigido erro que travava os menus da coleção quando após selecionar uma opção que exibe o slider, tocar imediatamento na busca de texto;
+* A ilustração dos cards spell tinha uma faixa de pixel em azul, corrigido.
+* Corrigido bug que ao retornar da visualização de scan, a carta ficava com a textura de Secret Rare;
+* Retirado efeito arco-íris quando visualizado scan de carta Super Rare ou superior;
+* Corrigido ao fazer display das cartas skill aparecia uma terceira categoria que deveria ficar oculta quando não era do tipo Field ou Continuos. [retirado os espaços entre os colchetes]
+* Texto de SET+CÓDIGO das skill foram ajustadas para a cor branca.
+
+Como comecei a implementar o sistema de deck builder (que não altera o save da coleção) há algumas funções inoperantes e em fase de teste:
+
+* Botão "My Decks" no menu principal funciona, mas leva a uma tela de testes;
+* Ajustado layout da visualição das cartas (reajustado tamanho e posição dos botoes) e acrescentado um novo botão que por enquanto não tem função e está em fase de testes (mas que servira para adicionar de forma rápida a carta em visualizacao para algum deck);
+* Corrigido um problema que freezava o app pq eu tinha renomeado o arquivo do ícone do deck builders (e nao tinha atualizado o caminho de importação do child) e na compilação do Godot rodava normal mas na versão exportadada simplesmente freezava sem explicação....................
+
+
+[b]Nota 2022.11.12 V0.4.03 - Correções 2[/b]
+
+* Corrigido bug que ao sair e acessar outra carta, era exibido as informações ocultadas da última carta que acessou;
+* Corrigido bug que a ordem de TYPE2 (Flip/toon/etc) & Effect apareciam em ordem inverso (se surgir syncro ou outra cor de carta vou ter lançar uma correção nisso aqui)
+
+
+
+[b]Nota 2022.11.12 V0.4.02 - Correções[/b]
+
+* Corrigido bug que o botão "+" para aumentar o Disered's card não funcionava;
+* Corrigido bug em que se habilitado ver o scan da carta, fechasse e selecionasse para visualizar outra carta, ao entrar tanto o scan e os demais texto apareciam simultaneamente;
+* Acrescentado indicação visual se a visualização do scan está ativo ou não.
+
+
+[b]Nota 2022.11.12 V0.4.01 - Um Power Up! no SDC[/b]
+
+* Corrigido problema em que não carregava a imagem do "Power Up!" (todas as cartas no yugipedia estão em PNG, exceto essa carta que está salva em JPG) [adaptado o código para baixar JPG quando PNG não disponível]
+* Adicionado um botão no modo de visualização da carta na qual permite visualizar o scan da carta;
+* Só fui reparar bem depois que a textura das Secret Rare estava errada; [corrigido]
+* Houve uma vez que deu erro no servidor/hospedagem retornando um 404, adicionado linhas de códigos para deixar a database armazenada no app intacto e não ser substituído [não testado ainda];
+* No campo de busca, se você terminasse com um " " (espaço) no final, fazia retornar uma busca vazia [corrigido];
+* Alterado o texto "QTD" para "Qtd";
+* Se ao fizer uma busca pela caixa de texto e depois apagar o texto e não der um "enter", o texto da última busca reaparece ao clicar/tocar fora da área;
+* Quando tentava tocar/clicar em alguma parte da caixa de texto, acidentalmente acionava os botões (Rarity/Limits/Fav/Qtd) que estavam sobrepostos;
+* Problema dectado quando é clicado várias vezes no dropdown menu consecutivamente;
+* Agora é possível aplicar filtro de LV ou Fav utilizando o mesmo valor (Ex: Min 7 e Max 7);
+* Corrigido efeito visual do filtro de Qtd* quando tentava-se retornar aos valores padrões;
+* Se a procura/filtro aplicado resultava em 11 cartas, apenas estava apareendo 10 cartas e sem a opção de ir para a próxima página [corrigido];
+* Correção das cores/opacidades dos textos dos filtros;
+* Agora quando abre o dropdown menu do Rarity o texto do botão de Atributo fica oculto;
+
+
+[b]Nota 2022.11.07 V0.4.00 - Opa! Tem atualização![/b]
+
+* Inserido verificador de update do app na tela de loading;
+* Tela de loading (quando falha conexão) alerta sobre falha de verificação de atualização na database e permite escolher entre tentar novamente ou continuar mesmo assim;
+* Corrigido um bug na cor/transparência dos filtros em ativo ou inativo na tela de coleção;
+* Otimizado o filtro de Type2 (Union/Flip/Toon/etc) na qual agora é possível buscar por Effect entre fusões e rituais (e também por cartas que não se aplicam com esse Type2 Ex: sem FLIP/UNION/TOON/etc)
+* Cartas com Type2 (Flip/Union/Toon/Gemini/etc) agora aparecem na visualização das cartas.
+* Corrigido erro na qual se você ativar a opção de nao ver as cartas em preto&branco a animação arco-íris das cartas Super Rare em diante não era exibido no catálogo;
+* Agora o Desperado Barrel Dragon do exemplo em configuração o seu efeito preto&branco/arco-íris exibido corretamente quando alterado as configurações;
+* Corrigido erro que quando filtrava por algum tipo de carta e voltava pro menu principal e reentrava no catálogo, o filtro anterior permanecia ativo ao invés de resetar pra visualização total;
+* Corrigido erro que congelava todos os botões de filtros quando ao fechar o slider (Fav/QTD/Limits/ATK/DEF/LV) tentava-se arrastar uma das pontas;
+* Pequena correção visual da tela de loading e tela principal;
+
+
+[b]Nota 2022.11.06 V0.30 - NOVOS FILTROS!!![/b]
+
+* ADICIONADO Filtro para buscar por nível raridade de carta;
+* ADICIONADO Filtro para buscar por nível de FAV;
+* ADICIONADO Filtro para buscar por nível de restrição de banlist;
+* Corrigido os 3 primeiros nomes da dropdown menu de skills (na qual ficavam repetidos na lista);
+* Corrigido o nome do personagem Axel (skill card);
+* Corrigido o tamanho dos botões para acessar os nomes de skills;
+* Corrigido layout dos nomes dos personagens para evitar que um nome sobreponha o outro;
+* Corrigido tamanho do botão quando seleciona qual tipo de carta quer buscar (monstro/skill/etc);
+* Eu havia esquecido de colocar um save ao mudar o Favorite de uma carta, corrigido.
+* Alterado alguns valores na Database em função do filtro de limited cards (versões desatualizadas vão acusar que o Desperado Barrel Dragon não é uma carta proibida em speed duel)
+* É possível apresentar alguns bugs essas novas funções...
+
+
+[b]Nota 2022.11.05 V0.27 - Cade as minhas cartas?[/b]
+
+* Algumas cartas desapareciam na COLLECTION quando manipulava os OWNDED/DESIRED QTY, essa função deveria ser exclusiva de TRADEABLE/WISHLIT, corrigido;
+* Corrigido erro na qual não aparecia o FAV na exibição de COLLECTION;
+* Adicionado botão de FAV no modo fullscreen;
+* Atualização das ilustrações dos botões + & - quando a carta fica em fullscreen;
+* Corrigido cor da fonte de título das cartas que estavam ficando em branco ao invés de preto (para monstros em raridade comum);
+* Inserido uma tela de PreLoad antes do menu aparecer;
+* Pequenas correções de bugs e otimizações.
+
+
+[b]Nota 2022.11.04 V0.26 - Quantos personagens! Parte2[/b]
+
+* Alguns botões de selecionar personagem de skill não estavam funcionando. Corrigidos.
+* Inserido um atrasoao iniciar (até o app tentar fazer verificação de atualização da database) para impedir que o menu seja acessado antes do app ler a database (e freezar por nao localizar os sets/cartas para display)
+
+
+[b]Nota 2022.11.04 V0.25 - Quantos personagens![/b]
+
+* Adicionado uma terceira coluna para TYPE1 para possibilitar a visualização dos nomes de personagens de skill;
+* Editado os nomes/sobrenomes dos personagens, agora estão condizentes com os nomes exibidos nas skills;
+* Corrigido bug que toda carta fica com efeito arco-iris de UR quando selecionada pra visualização;
+* Aumentado velocidade das animações de botões e aparições das cartas;
+* Corrigido (eu acho) bug na qual as imagem dos sets não apareciam na tela de seleção;
+* Corrigido cartas que apareciam parcialmente coloridas quando deveriam estar em preto e branco na Wishlist
+* Simplificado linhas de códigos e cenas para Trade & Wishlist.
+
+
+[b]Nota 2022.10.28 V0.24 - Search melhorado![/b]
+
+A caixa de search agora permite maior flexibilidade nas suas buscas, ao pesquisar por "DECK GY" somente aparecerão cartas que contenham todas as palavras (separados por espaço) simunltaneamente.
+
+O Antigo search somente iria mostrar cartas que contivesse exatamente todas as sequencias de caracteres.
+
+* Aumentado a velocidade em que o texto aparece nesta tela.
+* Adicionado ilustração do Falchionβ;
+* Mais uma tentativa de fazer a ilustração do PowerUp! rodar;
+* Correção no sistema de visualização das cartas em preto & branco.
+
+
+[b]Nota 2022.10.22 V0.23 - FAVORITE TIER & Pequenas Otimizações[/b]
+
+* Ao entrar na tela de Check for Updates revela a versão atual (canto inferior esquerdo);
+* Desabilitado seleção de texto nos títulos das cartas;
+* Algumas ilustração possuiam tamanho maior que a carta em display, corrigido;
+* Adicionado botões de Favoritar as cartas da coleção;
+* Correção do sistema de IMPORT (load save);
+* Tentativa de correção da ilustração da Skill Power Up!
+* Adicionado uma ilustração que indica o LOCKED quando tenta realizar edição rápida de QTD ou FAV na tela de coleção;
+* Sim, pulei o V.022 sem querer
+
+
+[b]Nota 2022.10.20 V0.21 - Duplicatas de cartas na database[/b]
+
+Havia algumas duplicatas de cartas na database, foram removidas.
+(Se antes dessa correção você tinha um savedata com as suas coleções, é sugerível apagar os dados e recomeçar)
+Implementado um alerta na planiha de desenvolvimento para evitar desde erro ocorrer novamente.
+
+* Corrigido algumas raridades de cartas da box SBCB;
+* Corrigido as ilustrações da Maga Negra, Dragão Branco de Olhos Azuis e Dragão Negro de Olhos Vermelhos;
+* Corrigido os caracteres "Téa" da carta skill da personagem, " ATK ?/DEF ?" da Maçã Dourada;
+
+
+[b]Nota 2022.10.16 V0.20 - Correções de bugs (save & search filter)[/b]
+
+* Correção em que não carregava novas cartas (600° carta pra frente)
+* Correção em que os últimos sets não eram acessíveis ao arrastar a tela de coleção;
+* Correção em que os últimos sets não eram acessíveis no dropdown menu;
+* Correção em que Token não aparecia no dropdown menu;
+* Correção em que Flip e Gemini não aparecia no dropdown menu;
+* Correção em que tamanho do botão do dropdown menu;
+* Correção em que clicava em Zumbi no dropdown menu dava erro;
+* Correção de search por ATK, DEF e LV;
+* Reformulado sistema de save, simplificando e otimizado arquivos
+* Always screen on adicionado (sua tela não desliga com o app aberto)
+
+
+V0.11 - alterando o save
+
+* Alterado o sistema de save (Antes unificava as cartas de mesmo nomes de mesma raridade. Agora estão separados por set);
+* Incluído slot de save para cartas Secret Rare;
+* Incluído template para carta token;
+
+
+[b]Nota 2022.10.13 V0.00 - Downloads n Cookies[/b]
+
+*EM FASE DE TESTE
+* Atualizando as funções do app para adaptar atualizações de sets e cartas de novas publicações sem houver a necessidade de atualizar o APP em si;
+* Ilustração das cartas são baixadas diretamente do yugipedia e ficam armazenadas em cookies no celular
+* Efeito visual de raridades das cartas atualizas com efeito gradiente arco-íris, nomes douradas com efeito e textura secret rare;
+* Adicionado simbolo de restrição ou limitação de cartas;
+
+
+[b]2020.06.07 Version - Teclado Virtual[/b]
+
+* Se você quiser digitar o caminho do diretório durante o IMPORT/EXPORT o teclado virtual não vai mais empurrar tudo pra cima;
+* Esqueci de mencionar, mas coloquei uma caixa de texto no IMPORT/EXPORT avisando se deu certo ou se deu erro nas operações;
+* Quando for editar seu nome de usuário em CONFIGURAÇÕES a tela toda se desloca pra cima,
+* Pequena correção visual em CONFIGURAÇÕES: Os botões e seus textos não piscam ao entrar.
+
+
+[b]2020.06.06 Version - Correção de IDs & IMPORT/EXPORT[/b]
+
+* Corrigido um erro na qual foi atribuído ID iguais das Skill do SBTK* (sneakpeak event) a algumas cartas dos novos decks básico SS04 e SS05;
+* EXPORT e IMPORT não mais persistentes durante a navegação em COLLECTION.
+* IMPORT não mais reseta a sua coleção quando tenta abrir um arquivo.save corrupto, ele mantém a sua coleção atual mesmo. [i]It's safe now[/i]
+
+
+[b]2020.06.03 Version - BUGs na WISHLIST / TRADABLE[/b]
+
+* Corrigido um bug que a WISHLIST / TRADABLE apenas apareciam uma lista de Insetos Básicos modificados;
+
+
+[b]2020.05.31 Version - Faça um backup/transfira seus dados para outro aparelho (em fase de teste)[/b]
+
+* Inserido a função de importação e exportação de dados da coleção, agora se você que tem um amigo que empresa as cartinhas ele pode visualizar a sua coleção contabilizada;
+* Como mencionado, está em fase de teste, muito cuidado pois não me responsabilizo ao utilizar essa ferramenta.
+* A função de EXPORTAR salva um documento no local de sua escolha.
+* A função de IMPORTAR carrega um arquivo externo e substitui sua atual coleção por esse novo arquivo.
+** Se esse novo arquivo estiver corrompido, das duas uma: 
+*** a) Zera teu save;
+*** b) Dá crash no app e você vai ter que limpar os caches de memoria pra voltar ao normal:
+
+
+[b]2020.05.28 Version - Opa, esqueci seu nome...e o caixão...[/b]
+
+* Agora o Coffin Seller é exibido corretamente.
+* Agora o app salva seu nome digitado nas configurações!
+* Quando entrar no modo "fullscreen" de uma carta na seção WISHLIST e TRADABLE a data e o nome não estarão mais sobrepostos;
+* Quando acessar a caixa de texto na qual pode inserir seu nome de usuário: o teclado se fechará quando tocar fora;
+* A opção de Text Save não estava funcionando como deveria, agora está, eu acho...
+* Aumentado a quantidade de particulas emitidas por SR & UR (pq sim, pq eu posso);
+* e ajustado a transparência dessas particulas.
+* Inseri em COLLECTION um checkbox em formato de cadeado, quando ativado ele desativa os toque de + (parte superior da carta) e - (parte inferior da carta) das cartas pra evitar operações acidentais enquanto navega, mas o toque pra FullScreen (centro da carta) permanece funcionando.
+
+
+[b]2020.05.27 Version - Compartilhar teus prints ficou mais identificável[/b]
+
+* Inserido (opcional) uma estampa de data no WISHLIST / TRADABLE
+* Além da data, pode agora colocar um Nome de Usuário, assim fica mais conveniente pra tirar print e postar num grupo
+* Opção de manter o texto digitado nas caixas de texto ou auto apaga-las quando for digitar algo novo.
+* Tudo isso nas CONFIGURAÇÕES, na qual foi adaptado para encaixar essas novas [i]features[/i] personalizadas ao teu gosto.
+
+
+[b]2020.05.25.c Version - NOVAS FUNÇÕES!! Touch here 4 details[/b]
+* Corrigido um delay que havia nos comandos + ou -.
+* Corrigido um bug que Jack's Knight não aparecia corretamente;
+* Recriados visualmente todos os botões do menu principal, a fim de reduzir o peso final do app e facilitar edições de texto.
+* Inserido botão para acessar Configurações;
+* Reajustado a escala das ilustrações; (correção visual);
+* Botões preto e branco do menu principal indicando que algumas funções não foram implementadas (ainda);
+* Re-organização do algoritmos na scene COLLECTION;
+* Adição de efeitos visuais às tranisções do COLLECTION.
+
+[b]Configurações[/b]
+1) Agora é possível configurar se deseja ver em grayscale as cartas indicadas (que possui) zero
+2) Opção de esconder o número indicativo de quantas cópias possui da carta;
+3) Opção de re-ativar a opção de selecionar texto das descrições e efeitos de carta;
+4) Opção de desativar as particulas que indicam a raridade das cartas.
+
+[b]WISHLIST / TRADABLE[/b]
+* DISPONÍVEL!!
+* Para os novos usários, todas as cartas quando acessadas em fullscreen aparece uma fração, exemplo: 0/3
+** O primeiro algorismo representa a quantidade de cartas você tem na sua coleção;
+** O segundo algorismo representa a quantidade desejada;
+** Ou seja, se há uma diferença entre esses valores, o app associa que ou você procura uma carta ou está disposto a troca-la.
+
+
+[b]2020.05.24 Version - Onde estava o Switcheroo?[/b]
+
+Nota de Atualização
+* Agora Update Log tem seu proprio ícone;
+* Log sincroniza automaticamente com a internet, baixando o log da nova atualização disponível;
+* Removido a função de selecionar texto nas descrições/efeitos das cartas, pois conflitava com o scroll;
+* Cartas ficam em Preto&Branco caso o número indicado for Zero;
+* Inserido o número de páginas na Coleção
+* Corrigido um Bug que ocultava a útima página de uma coleção quando a quantidade de cartas contidas era um número que terminava com 1.
+** Com isso Switcheroo aparece quando o set SBTK é acessado (sem filtro aplicado).
+
+
+[b]2020.05.23.a Version - Agora tem Log e Verificador de Update, touch here!!![/b]
+
+[b]VERIFICADOR DE ATUALIZAÇÃO[/b]
+* Dentro do [i]scene[/i] LOG adicionei um verificador aqui canto superior direito que verifica se há novas atualizações deste app;
+* Relatado que em alguns aparelhos retorna erro.
+
+[b]LOG[/b]
+* Decidi registrar todas as minhas ações em um [b]log[/b], na qual você está lendo -q
+* Acrescentado a função de [b]botão[/b] a caixa de texto que exibe a versão atual do aplicativo;
+* Adicionado esta [i]scene[/i] na qual exibe o log.
+
+[b]ILUSTRAÇÕES[/b]
+* Foi adicionado as ilustrações faltantes dos novos decks: SS04 e SS05;
+* Corrigido a ilustração do Barrel Dragon;
+* Foi adicionado o código do set/coleção na ilustração das cartas;
+
+[b]AJUSTES[/b]
+* Animações dos botões do menu principal aparecem 0,5 segundo mais rápido~
+* Agora você pode selecionar o texto do nome da carta ou sua descrição/efeito;
+* Retirado a função de Deletar Save teste que estava atribuído ao botão Tradable, que por sinal, nao funcionava;
+* A caixa de texto de Search mantém salvo a última entrada digitada.
+
+[b]CORREÇÕES DE BUG[/b]
+* Foram tantos que nem lembro mais quais eu corrigi~ e.e
+
+[b]REMOVIDO[/b]
+* Removido Desperado Barrel Dragon;
+
+[i]Shouldn't I write this in English?...hm...naah[/i]
+
+Ah, antes que eu me esqueça, para voltar só clicar/tocar no logo lá em cima.
+Obrigado pela atenção.
+Att.
+@NWErickSasaki

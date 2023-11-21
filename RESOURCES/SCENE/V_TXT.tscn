@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://SCENE/VERSION_TXT.gd" type="Script" id=1]
+[ext_resource path="res://others/SmallFont.tres" type="DynamicFont" id=2]
+
+[node name="V_TXT" type="RichTextLabel"]
+margin_top = 11.0
+margin_right = 1920.0
+margin_bottom = 48.0
+custom_fonts/normal_font = ExtResource( 2 )
+scroll_active = false
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

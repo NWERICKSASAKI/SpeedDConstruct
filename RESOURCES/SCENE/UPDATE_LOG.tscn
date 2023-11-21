@@ -1,0 +1,79 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Fonts/Yu-Gi-Oh! ITC Stone Serif Small Caps Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Fonts/Yu-Gi-Oh! ITC Stone Serif LT Italic.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://SCENE/UPDATE_TXT.tscn" type="PackedScene" id=3]
+[ext_resource path="res://SCENE/LOGO.gd" type="Script" id=4]
+[ext_resource path="res://Fonts/Yu-Gi-Oh! Matrix Book.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://SCENE/LOG_TXT.gd" type="Script" id=6]
+[ext_resource path="res://others/SmallFont.tres" type="DynamicFont" id=7]
+[ext_resource path="res://IMAGENS_ICONES/Icon_Log.png" type="Texture" id=8]
+[ext_resource path="res://Fonts/LOGO_B_TEXT.tres" type="DynamicFont" id=9]
+[ext_resource path="res://SCENE/VERSION_TXT.gd" type="Script" id=10]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 32
+font_data = ExtResource( 5 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 245, 50 )
+
+[node name="UPDATE_LOG" type="Node2D"]
+
+[node name="LOG_TXT" type="RichTextLabel" parent="."]
+modulate = Color( 1, 1, 1, 0.686275 )
+margin_left = 40.0
+margin_top = 158.0
+margin_right = 1881.0
+margin_bottom = 1025.0
+rect_clip_content = false
+custom_fonts/italics_font = SubResource( 1 )
+custom_fonts/bold_font = SubResource( 2 )
+custom_fonts/normal_font = SubResource( 3 )
+text = "V"
+script = ExtResource( 6 )
+
+[node name="Tw" type="Tween" parent="LOG_TXT"]
+
+[node name="UPDATE_TXT" parent="." instance=ExtResource( 3 )]
+
+[node name="V_TXT" type="RichTextLabel" parent="."]
+margin_top = 1042.06
+margin_right = 1920.0
+margin_bottom = 1079.06
+custom_fonts/bold_font = ExtResource( 7 )
+custom_fonts/normal_font = ExtResource( 7 )
+bbcode_enabled = true
+bbcode_text = "A"
+text = "A"
+scroll_active = false
+script = ExtResource( 10 )
+
+[node name="LOGO" type="Sprite" parent="."]
+position = Vector2( 960, 75 )
+texture = ExtResource( 8 )
+offset = Vector2( -200, 0 )
+script = ExtResource( 4 )
+
+[node name="TSB" type="TouchScreenButton" parent="LOGO"]
+shape = SubResource( 4 )
+shape_centered = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="LOGO"]
+margin_left = -132.0
+margin_top = -33.0
+margin_right = 241.0
+margin_bottom = 53.0
+custom_fonts/normal_font = ExtResource( 9 )
+bbcode_enabled = true
+bbcode_text = "[center]Update's Log"
+text = "Update's Log"
+scroll_active = false

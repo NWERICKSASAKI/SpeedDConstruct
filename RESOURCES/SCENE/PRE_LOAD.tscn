@@ -1,0 +1,92 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://others/SmallFont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://SCENE/PRE_LOAD.gd" type="Script" id=2]
+[ext_resource path="res://IMAGENS_ICONES/splash.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1000, 100 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 1000, 100 )
+
+[node name="PRE_LOAD" type="Container"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -960.0
+margin_top = -540.0
+margin_right = 960.0
+margin_bottom = 540.0
+script = ExtResource( 2 )
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="HTTPRequest2" type="HTTPRequest" parent="."]
+
+[node name="HTTPRequest3" type="HTTPRequest" parent="."]
+
+[node name="CREDITS" type="Sprite" parent="."]
+position = Vector2( 960, 540 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="TXT1" type="RichTextLabel" parent="."]
+margin_left = -473.0
+margin_top = 736.0
+margin_right = 2473.0
+margin_bottom = 3262.0
+custom_fonts/bold_font = ExtResource( 1 )
+custom_fonts/normal_font = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center]L o a d i n g . . . [/center]"
+text = "L o a d i n g . . . "
+
+[node name="CONTINUE_TXT" type="RichTextLabel" parent="."]
+margin_left = -494.0
+margin_top = 967.0
+margin_right = 2452.0
+margin_bottom = 3493.0
+custom_fonts/bold_font = ExtResource( 1 )
+custom_fonts/normal_font = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center]Touch here to preeced without checking for updates[/center]"
+text = "Touch here to preeced without checking for updates"
+
+[node name="VERSION_TXT" type="RichTextLabel" parent="."]
+margin_left = -488.0
+margin_top = 23.0
+margin_right = 2458.0
+margin_bottom = 2549.0
+custom_fonts/bold_font = ExtResource( 1 )
+custom_fonts/normal_font = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center]Touch here to preeced without checking for updates[/center]"
+text = "Touch here to preeced without checking for updates"
+
+[node name="VERSION_TXT2" type="RichTextLabel" parent="."]
+margin_left = -473.0
+margin_top = 89.0
+margin_right = 2473.0
+margin_bottom = 2615.0
+custom_fonts/bold_font = ExtResource( 1 )
+custom_fonts/normal_font = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center]Touch here to preeced without checking for updates[/center]"
+text = "Touch here to preeced without checking for updates"
+
+[node name="ContinueButton" type="TouchScreenButton" parent="."]
+position = Vector2( 999, 982 )
+shape = SubResource( 1 )
+shape_centered = false
+
+[node name="RetryButton" type="TouchScreenButton" parent="."]
+position = Vector2( 1001, 762 )
+shape = SubResource( 2 )
+shape_centered = false
+
+[node name="updateButton" type="TouchScreenButton" parent="."]
+position = Vector2( 1001, 101 )
+shape = SubResource( 2 )
+shape_centered = false

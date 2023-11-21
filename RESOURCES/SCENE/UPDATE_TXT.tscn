@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://SCENE/UPDATE_TXT.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/Yu-Gi-Oh! Matrix Book.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 26
+font_data = ExtResource( 2 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 250, 40 )
+
+[node name="UPDATE_TXT" type="RichTextLabel"]
+margin_left = 1376.0
+margin_top = 19.0
+margin_right = 1881.0
+margin_bottom = 106.0
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[right]UP TO DATE[/right]"
+text = "UP TO DATE"
+script = ExtResource( 1 )
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+shape = SubResource( 2 )
