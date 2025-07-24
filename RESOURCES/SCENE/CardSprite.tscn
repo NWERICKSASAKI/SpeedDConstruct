@@ -95,6 +95,12 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 305, 442 )
 region_filter_clip = true
 
+[node name="BG" type="Sprite" parent="."]
+position = Vector2( 9.53674e-07, 9.53674e-07 )
+scale = Vector2( 2.6, 2.6 )
+texture = ExtResource( 1 )
+centered = false
+
 [node name="SecretRare" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0.6 )
 material = SubResource( 12 )
@@ -103,11 +109,6 @@ scale = Vector2( 2.54869, 2.53909 )
 texture = ExtResource( 4 )
 centered = false
 script = ExtResource( 10 )
-
-[node name="BG" type="Sprite" parent="."]
-scale = Vector2( 2.6, 2.6 )
-texture = ExtResource( 1 )
-centered = false
 
 [node name="ATTRIBUTE" type="Sprite" parent="."]
 position = Vector2( 955.048, 124.081 )
@@ -120,7 +121,6 @@ scale = Vector2( 2, 2 )
 texture = ExtResource( 7 )
 
 [node name="LV1" type="Sprite" parent="."]
-visible = false
 position = Vector2( 938.057, 224.151 )
 scale = Vector2( 2.444, 2.444 )
 texture = ExtResource( 6 )

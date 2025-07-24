@@ -15,7 +15,7 @@ var storedPics = ["a"] # [IMG_URL]
 var which_DeckID
 var which_DeckArray
 
-const VERSAO="[b]V0.4.07[/b]" ############### TODA VEZ QUE FOR PUBLICAR UMA VERSÃO ATUALIZADA DO APK ALTERAR ESSA CONSTANTE (E NO LOG.TXT)
+const VERSAO="[b]V0.4.08[/b]" ############### TODA VEZ QUE FOR PUBLICAR UMA VERSÃO ATUALIZADA DO APK ALTERAR ESSA CONSTANTE (E NO LOG.TXT)
 var LOG_TXT="" #texto do log.txt
 var theresUpdate=false
 

@@ -18,7 +18,7 @@ func _ready():
 
 
 func place_cards():
-	print("CARDS_DISPLAY / place_cards()")
+	print("CARDS_DISPLAY / place_cards()")	
 	var i = 0
 	var j = 133
 	if GLOBAL.WT==0:

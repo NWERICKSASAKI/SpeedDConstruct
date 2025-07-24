@@ -14,3 +14,4 @@ func _ready():
 func _process(delta):
 	d += delta
 	modulate=Color(1,1,1,0.60+sin(3*d)/4)
+

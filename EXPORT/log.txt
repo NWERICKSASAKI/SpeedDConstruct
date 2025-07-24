@@ -1,4 +1,52 @@
-[b]V0.4.07[/b]
+[b]V0.4.08[/b]
+
+[b]Nota 2025.07.22 V0.4.08 - Voltei a programaaaaar[/b]
+
+* Adicionado filtro para Prismatic Secret Rare
+* Corrigido (mas ainda feio né) exibição de filtro para Skills (...quando programei não esparava que fosse ter tantos personagens assim...)
+
+
+[b]Ideias e Correções para as próximas atualizações[/b]
+* Reestruturação do código do app inteiro......
+* Adicionar filtro de ATK/DEF para localizar "?"
+* [i]Deck Builder (em desenvolvimento);[/i]
+* Correção visual das novas boxes na tela de seleção de set;
+* Adicionar opção de selecionar banlist;
+* Efeito giroscópio para Super Rare, Ultra Rare, Secret Rare e etc.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[b]Nota 2025.07.22 V0.4.07 - Artes alternativas e Brazinska[/b]
+
+Atualização de Catálogo:
+* Adicionado Artes alternativa dos últimos Dark Magician / Girl / Blue-Eyes
+* Atualizado a BanList Jul 2025
+* Adicionado DEM6
+* Adicionado OPTP-EN005
+
+
+[b]Nota 2025.01.10 V0.4.07 - Lançamento SBC2 + Prismatic Secret Rare[/b]
+
+Atualização de Catálogo:
+* Adicionado SBC2
+* Adicionado a raridade Prismatic Secret Rare
+* Adicionado efeito de raridade aos Níves dos monstros (Prismatic) Secret Rare
+
+
+[b]Nota 2024.10.25 V0.4.07 - Lançamento STP7 + BanList Jul 2024[/b]
+
+Atualização de Catálogo:
+* Adicionado STP7
+* Atualizado forbiden limited list de julho 2024.
+
+
+[b]Nota 2024.04.13 V0.4.07 - Lançamento SGX4 + BanList Jan 2024[/b]
+
+Atualização de Catálogo:
+* Adicionado SGX4 Midterm Destruction
+* Atualizado limited list de janeiro 2024.
+
 
 [b]Nota 2023.08.30 V0.4.07 - Atualização Setembro[/b]
 
@@ -6,21 +54,6 @@ Atualização de Catálogo:
 * Adicionado STP6;
 * Atualizado limited list de setembro 2023.
 
-
-[b]Ideias e Correções para as próximas atualizações[/b]
-
-* Reestruturação do código do app inteiro......
-* Atualizar banlist;
-* Adicionar filtro de ATK/DEF para localizar "?"
-* [i]Deck Builder (em desenvolvimento);[/i]
-* Correção visual das novas boxes na tela de seleção de set;
-* Otimização da tela Collection;
-* Otimização da tela Configuration;
-* Adicionar opção de selecionar qual banlist visualizar no cátalogo;
-* Efeito giroscópio para Super Rare, Ultra Rare, Secret Rare.
-
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 [b]Nota 2023.08.30 V0.4.07 - SBC1 e atuzalição BanList[/b]
 

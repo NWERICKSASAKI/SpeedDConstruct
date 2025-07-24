@@ -40,10 +40,12 @@ var TYPE1SKILL_TXT = ""
 var TYPE1SKILL_TXTa = ""
 var TYPE1SKILL_TXTb = ""
 var TYPE1SKILL_TXTc = ""
+var TYPE1SKILL_TXTd = ""
+var TYPE1SKILL_TXTe = ""
 var TYPE1Array = [[],[],[],[]]
 var TYPE2MONSTER_TXT = ""
 var ALLATTRIB_TXT = ""
-var ALLRARITY = "\nSHOW ALL \nCommon \nSuper Rare \nUltra Rare \nSecret Rare"
+var ALLRARITY = "\nSHOW ALL \nCommon \nSuper Rare \nUltra Rare \nSecret Rare \nPrismatic Secret Rare"
 
 var AttribArray = []
 
@@ -216,6 +218,8 @@ func ScanArrayOptions(): #Monster Type / Skills
 	TYPE1SKILL_TXTa="\n\n"
 	TYPE1SKILL_TXTb="\n\n"
 	TYPE1SKILL_TXTc="\n\n"
+	TYPE1SKILL_TXTd="\n\n"
+	TYPE1SKILL_TXTe="\n\n"
 	i=0
 	while i<Type1ArraySkill.size():
 		if i<=(1*13-1):
@@ -226,6 +230,10 @@ func ScanArrayOptions(): #Monster Type / Skills
 			TYPE1SKILL_TXTb=TYPE1SKILL_TXTb+"\n"+Type1ArraySkill[i] 
 		elif i<=(4*13-1):
 			TYPE1SKILL_TXTc=TYPE1SKILL_TXTc+"\n"+Type1ArraySkill[i] 
+		elif i<=(5*13-1):
+			TYPE1SKILL_TXTd=TYPE1SKILL_TXTd+"\n"+Type1ArraySkill[i] 
+		elif i<=(6*13-1):
+			TYPE1SKILL_TXTe=TYPE1SKILL_TXTe+"\n"+Type1ArraySkill[i] 
 		i+=1
 	TYPE1Array [0] = Type1ArrayMonster
 	TYPE1Array [3] = Type1ArraySkill
@@ -331,6 +339,8 @@ func showSet(WHICH): #apertado algum botao de filtro
 	$THE_BUTTON/TXT_ALLTYPE1a.visible=false
 	$THE_BUTTON/TXT_ALLTYPE1b.visible=false
 	$THE_BUTTON/TXT_ALLTYPE1c.visible=false
+	$THE_BUTTON/TXT_ALLTYPE1d.visible=false
+	$THE_BUTTON/TXT_ALLTYPE1e.visible=false
 	$THE_BUTTON/TXT_ALLTYPE2.visible=false
 	$THE_BUTTON/TXT_ALLATTRIB.visible=false
 	$THE_BUTTON/TXT_ALLRARITY.visible=false
@@ -408,17 +418,23 @@ func showSet(WHICH): #apertado algum botao de filtro
 			$THE_BUTTON/TXT_ALLTYPE1a.visible=true
 			$THE_BUTTON/TXT_ALLTYPE1b.visible=true
 			$THE_BUTTON/TXT_ALLTYPE1c.visible=true
+			$THE_BUTTON/TXT_ALLTYPE1d.visible=true
+			$THE_BUTTON/TXT_ALLTYPE1e.visible=true
 			$TXT_TYPE1.text="Which Type?"
 			if CARD1_TXT=="Monster":
 				$THE_BUTTON/TXT_ALLTYPE1.text = TYPE1MONSTER_TXT
 				$THE_BUTTON/TXT_ALLTYPE1a.text = TYPE1MONSTER_TXTa
 				$THE_BUTTON/TXT_ALLTYPE1b.text = TYPE1MONSTER_TXTb
 				$THE_BUTTON/TXT_ALLTYPE1c.text = TYPE1MONSTER_TXTc
+				$THE_BUTTON/TXT_ALLTYPE1d.text = ""
+				$THE_BUTTON/TXT_ALLTYPE1e.text = ""
 			elif CARD1_TXT=="Skill":
 				$THE_BUTTON/TXT_ALLTYPE1.text = TYPE1SKILL_TXT
 				$THE_BUTTON/TXT_ALLTYPE1a.text = TYPE1SKILL_TXTa
 				$THE_BUTTON/TXT_ALLTYPE1b.text = TYPE1SKILL_TXTb
 				$THE_BUTTON/TXT_ALLTYPE1c.text = TYPE1SKILL_TXTc
+				$THE_BUTTON/TXT_ALLTYPE1d.text = TYPE1SKILL_TXTd
+				$THE_BUTTON/TXT_ALLTYPE1e.text = TYPE1SKILL_TXTe
 			else:
 				$THE_BUTTON/TXT_ALLTYPE1.text = "\n\nDEU RUIM"
 			Tw.interpolate_property(get_node("THE_BUTTON/TXT_ALLTYPE1"),"visible_characters", 0, get_node("THE_BUTTON/TXT_ALLTYPE1").text.length(), 2*t, Tween.TRANS_LINEAR, Tween.EASE_OUT)
@@ -429,6 +445,11 @@ func showSet(WHICH): #apertado algum botao de filtro
 			Tw.start()
 			Tw.interpolate_property(get_node("THE_BUTTON/TXT_ALLTYPE1c"),"visible_characters", 0, get_node("THE_BUTTON/TXT_ALLTYPE1c").text.length(), 8*t, Tween.TRANS_LINEAR, Tween.EASE_OUT)
 			Tw.start()
+			Tw.interpolate_property(get_node("THE_BUTTON/TXT_ALLTYPE1d"),"visible_characters", 0, get_node("THE_BUTTON/TXT_ALLTYPE1d").text.length(), 10*t, Tween.TRANS_LINEAR, Tween.EASE_OUT)
+			Tw.start()
+			Tw.interpolate_property(get_node("THE_BUTTON/TXT_ALLTYPE1e"),"visible_characters", 0, get_node("THE_BUTTON/TXT_ALLTYPE1e").text.length(), 12*t, Tween.TRANS_LINEAR, Tween.EASE_OUT)
+			Tw.start()
+
 		"TYPE2":
 			$TXT_TYPE2.modulate = Color(1,1,1,0.75)
 			$THE_BUTTON/TXT_ALLTYPE2.visible=true
@@ -574,6 +595,10 @@ func pickedSet(): #algum btrão do dropdown foi selecionado
 	Tw.interpolate_property(get_node("THE_BUTTON/TXT_ALLTYPE1b"),"visible_characters", get_node("THE_BUTTON/TXT_ALLTYPE1b").text.length(), 0, 3*t, Tween.TRANS_LINEAR, Tween.EASE_OUT)
 	Tw.start()
 	Tw.interpolate_property(get_node("THE_BUTTON/TXT_ALLTYPE1c"),"visible_characters", get_node("THE_BUTTON/TXT_ALLTYPE1c").text.length(), 0, 3*t, Tween.TRANS_LINEAR, Tween.EASE_OUT)
+	Tw.start()
+	Tw.interpolate_property(get_node("THE_BUTTON/TXT_ALLTYPE1d"),"visible_characters", get_node("THE_BUTTON/TXT_ALLTYPE1d").text.length(), 0, 3*t, Tween.TRANS_LINEAR, Tween.EASE_OUT)
+	Tw.start()
+	Tw.interpolate_property(get_node("THE_BUTTON/TXT_ALLTYPE1e"),"visible_characters", get_node("THE_BUTTON/TXT_ALLTYPE1e").text.length(), 0, 3*t, Tween.TRANS_LINEAR, Tween.EASE_OUT)
 	Tw.start()
 	Tw.interpolate_property(get_node("THE_BUTTON/TXT_ALLTYPE2"),"visible_characters", get_node("THE_BUTTON/TXT_ALLTYPE2").text.length(), 0, t, Tween.TRANS_LINEAR, Tween.EASE_OUT)
 	Tw.start()
@@ -812,6 +837,68 @@ func pickedSet(): #algum btrão do dropdown foi selecionado
 			CustomSearch(10,TYPE1Array[CARD1_type][50])
 		elif mouse_pos[1]<140+H*14:
 			CustomSearch(10,TYPE1Array[CARD1_type][51])
+	elif mouse_pos[0]<1685 and $THE_BUTTON/TXT_ALLTYPE1.visible==true:
+		if mouse_pos[1]<140+H*0:
+			print("pass")
+		elif mouse_pos[1]<140+H*1:
+			CustomSearch(10,false)
+		elif mouse_pos[1]<140+H*2:
+			CustomSearch(10,TYPE1Array[CARD1_type][52])
+		elif mouse_pos[1]<140+H*3:
+			CustomSearch(10,TYPE1Array[CARD1_type][53])
+		elif mouse_pos[1]<140+H*4:
+			CustomSearch(10,TYPE1Array[CARD1_type][54])
+		elif mouse_pos[1]<140+H*5:
+			CustomSearch(10,TYPE1Array[CARD1_type][55])
+		elif mouse_pos[1]<140+H*6:
+			CustomSearch(10,TYPE1Array[CARD1_type][56])
+		elif mouse_pos[1]<140+H*7:
+			CustomSearch(10,TYPE1Array[CARD1_type][57])
+		elif mouse_pos[1]<140+H*8:
+			CustomSearch(10,TYPE1Array[CARD1_type][58])
+		elif mouse_pos[1]<140+H*9:
+			CustomSearch(10,TYPE1Array[CARD1_type][59])
+		elif mouse_pos[1]<140+H*10:
+			CustomSearch(10,TYPE1Array[CARD1_type][60])
+		elif mouse_pos[1]<140+H*11:
+			CustomSearch(10,TYPE1Array[CARD1_type][61])
+		elif mouse_pos[1]<140+H*12:
+			CustomSearch(10,TYPE1Array[CARD1_type][62])
+		elif mouse_pos[1]<140+H*13:
+			CustomSearch(10,TYPE1Array[CARD1_type][63])
+		elif mouse_pos[1]<140+H*14:
+			CustomSearch(10,TYPE1Array[CARD1_type][64])
+	elif mouse_pos[0]<1985 and $THE_BUTTON/TXT_ALLTYPE1.visible==true:
+		if mouse_pos[1]<140+H*0:
+			print("pass")
+		elif mouse_pos[1]<140+H*1:
+			CustomSearch(10,false)
+		elif mouse_pos[1]<140+H*2:
+			CustomSearch(10,TYPE1Array[CARD1_type][65])
+		elif mouse_pos[1]<140+H*3:
+			CustomSearch(10,TYPE1Array[CARD1_type][66])
+		elif mouse_pos[1]<140+H*4:
+			CustomSearch(10,TYPE1Array[CARD1_type][67])
+		elif mouse_pos[1]<140+H*5:
+			CustomSearch(10,TYPE1Array[CARD1_type][68])
+		elif mouse_pos[1]<140+H*6:
+			CustomSearch(10,TYPE1Array[CARD1_type][69])
+		elif mouse_pos[1]<140+H*7:
+			CustomSearch(10,TYPE1Array[CARD1_type][70])
+		elif mouse_pos[1]<140+H*8:
+			CustomSearch(10,TYPE1Array[CARD1_type][71])
+		elif mouse_pos[1]<140+H*9:
+			CustomSearch(10,TYPE1Array[CARD1_type][72])
+		elif mouse_pos[1]<140+H*10:
+			CustomSearch(10,TYPE1Array[CARD1_type][73])
+		elif mouse_pos[1]<140+H*11:
+			CustomSearch(10,TYPE1Array[CARD1_type][74])
+		elif mouse_pos[1]<140+H*12:
+			CustomSearch(10,TYPE1Array[CARD1_type][75])
+		elif mouse_pos[1]<140+H*13:
+			CustomSearch(10,TYPE1Array[CARD1_type][76])
+		elif mouse_pos[1]<140+H*14:
+			CustomSearch(10,TYPE1Array[CARD1_type][77])
 	elif mouse_pos[0]<455 and $THE_BUTTON/TXT_ALLTYPE2.visible==true:
 		print("pass")
 	elif mouse_pos[0]<700 and $THE_BUTTON/TXT_ALLTYPE2.visible==true:
@@ -877,6 +964,8 @@ func pickedSet(): #algum btrão do dropdown foi selecionado
 			CustomSearch(7,"Ultra Rare")
 		elif mouse_pos[1]<140+H*4:
 			CustomSearch(7,"Secret Rare")
+		elif mouse_pos[1]<140+H*5:
+			CustomSearch(7,"Prismatic Secret Rare")
 
 
 #  0         1 2   3   4   5   6     7      8     9    10    11     12   13  14 15      16      17  18    19

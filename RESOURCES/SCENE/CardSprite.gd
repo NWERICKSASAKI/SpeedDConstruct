@@ -216,6 +216,14 @@ func loadData(CardArray): # chamado por CARDDISPLAY
 #			$NAME.get_font("normal_font").outline_size=5
 			SP = preload("res://SCENE/GOLDEN_SHADER.tres")
 			$SecretRare.visible=true
+			$SecretRare.texture=load('res://BIBLIOTECA/CardSetup/Rarity/Secret.png')
+		"Prismatic Secret Rare":
+			rainbow(true)
+			$NAME.set("custom_colors/default_color",URColor)
+#			$NAME.get_font("normal_font").outline_size=5
+			SP = preload("res://SCENE/GOLDEN_SHADER.tres")
+			$SecretRare.visible=true
+			$SecretRare.texture=load('res://BIBLIOTECA/CardSetup/Rarity/Mosaic.png')
 		_:
 			rainbow(true)
 			$NAME.set("custom_colors/default_color",URColor)
@@ -242,7 +250,7 @@ func loadIllustration(newID):
 			print("An error occurred in the HTTP request.")
 			downloading=false
 			$Illustration.texture=load("res://BIBLIOTECA/erro.jpg")
-	elif(String(GLOBAL.storedPics[ID])!=IMG_URL and downloading==true):
+	elif(String(GLOBAL.storedPics[ID])!=IMG_URL and downloading==true): #
 		$Illustration.texture=load("res://BIBLIOTECA/tryagain.jpg") 
 	elif(GLOBAL.storedPics[ID]==IMG_URL):
 		var texture = ImageTexture.new()
@@ -308,6 +316,11 @@ func rainbow(bool_key): # CARD - UpdateNum()
 		SP1=null
 	$Illustration.set_material(SP1)
 	$ATTRIBUTE.set_material(SP1)
+	$LV1.set_material(SP1)
+	var i = 2;
+	while i<=12:
+		get_node("LV1/LV"+String(i)).set_material(SP1)
+		i+=1
 #	SP = preload("res://SCENE/RAINBOW_SHADER.tres")
 
 
