@@ -198,6 +198,7 @@ func loadData(CardArray): # chamado por CARDDISPLAY
 	$SecretRare.visible=false
 	var Gmc = GLOBAL.myCards
 	num = int(Gmc[_O][0])
+	$SecretRare.scale=Vector2(2.549,2.549)
 	match CardArray[7]:
 		"Common":
 			rainbow(false)
@@ -222,6 +223,7 @@ func loadData(CardArray): # chamado por CARDDISPLAY
 			$NAME.set("custom_colors/default_color",URColor)
 #			$NAME.get_font("normal_font").outline_size=5
 			SP = preload("res://SCENE/GOLDEN_SHADER.tres")
+			$SecretRare.scale=Vector2(1.95,1.34)
 			$SecretRare.visible=true
 			$SecretRare.texture=load('res://BIBLIOTECA/CardSetup/Rarity/Mosaic.png')
 		_:
